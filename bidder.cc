@@ -45,12 +45,11 @@ void GenerateBids(int rounds, int budget, std::string output_filename) {
   std::ofstream outfile(output_filename);
   for(int i = 0; i < rounds; ++i) {
     if(budget > 0) {
-      if(rounds % 2 == 0) {
-        outfile << " " << budget/(rounds/2) << "\n";
-        budget -= budget/(rounds/2);
+      if(i % 2 == 0) {
+        outfile << budget/(rounds/2) << "\n";
       }
       else {
-        outfile << " " << budget-budget << "\n";
+        outfile << budget-budget << "\n";
       }
     }
   }
