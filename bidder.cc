@@ -22,7 +22,7 @@ std::vector<std::string> GetTeamMembers() {
 // the strategy your logic uses to bid (e.g., "We bid high early on").
 std::string GetStrategy() {
   // Your code here
-  return "";
+  return "Betting 20 every other round until out of budget.";
 }
 
 // TODO: Implement the bidding logic.
